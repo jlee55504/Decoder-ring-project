@@ -9,39 +9,46 @@ const caesarModule = (function () {
   function caesar(input, shift, encode = true) {
     // your solution code here
     let answer = "";
-    let currLetter;
     let currIndex;
     let newIndex;
     let code = input.toLowerCase();
-    if (shift === 0 || shift < -25 || shift > 25) return false;
-    console.log(input)
-    console.log(shift);
+    if (shift === 0 || shift <= -25 || shift > 25 || !shift) return false;
+
  
+    const shiftNegativeNumbers = (currIndex, numberShift) => {
+        newIndex = currIndex + numberShift + 25;
+        answer += alphabet[newIndex + 1];
+    }
+    const shiftPositiveNumbers = (currImdex, numberShift) => {
+        newIndex = currIndex + numberShift - 25;
+        answer += alphabet[newIndex -1];
+    }
+    if (encode === false) {
+      shift = shift.toString();
+      if (shift[0] === "-") shift = shift.slice(1, shift.length);
+        else shift = `-${shift}`
+        shift = Number(shift);
+    }
+
+
     for (let i = 0; i < code.length; i++) {
       if (!alphabet.includes(code[i])) {
         answer += code[i];
         continue;
       }
+        currIndex = alphabet.indexOf(code[i]);
       if (shift < 0) {
-        currIndex = alphabet.indexOf(code[i]);
         if (currIndex + shift < 0) {
-          console.log("minus number > 25");
-           newIndex = currIndex + shift + 25;
-          answer += alphabet[newIndex + 1];
+          shiftNegativeNumbers(currIndex, shift);
           continue;
         }
-        console.log("minus number < 25")
-        answer += alphabet[currIndex + shift];
+          answer += alphabet[currIndex + shift];
       } else if (shift > 0) {
-        currIndex = alphabet.indexOf(code[i]);
-        if (currIndex + shift > 25) {
-          console.log("Positive number > 25")
-          newIndex = currIndex + shift - 25;
-          answer += alphabet[newIndex -1];
+          if (currIndex + shift > 25) {
+          shiftPositiveNumbers(currIndex, shift);
           continue;
         }
-        console.log("Positive number < 25")
-        answer += alphabet[currIndex + shift];
+          answer += alphabet[currIndex + shift];
       }
     }
     return answer;
