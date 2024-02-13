@@ -11,18 +11,24 @@ const caesarModule = (function () {
     let answer = "";
     let currIndex;
     let newIndex;
+    
+    /*Makes sure all message letters are lowercase*/
     let code = input.toLowerCase();
+    
+    /*Returns false if "_shift_" value isn't present, is greater than 25, is equal to 0, or is equal or less than -25*/
     if (shift === 0 || shift <= -25 || shift > 25 || !shift) return false;
 
- 
+ /*Helper function to shift letters correctly if the total number of shifts goes over the length of the alphabet array*/
     const shiftNegativeNumbers = (currIndex, numberShift) => {
         newIndex = currIndex + numberShift + 25;
         answer += alphabet[newIndex + 1];
     }
-    const shiftPositiveNumbers = (currImdex, numberShift) => {
+     /*Helper function to shift letters correctly if the total number of shifts goes over the length of the alphabet array*/
+    const shiftPositiveNumbers = (currIndex, numberShift) => {
         newIndex = currIndex + numberShift - 25;
         answer += alphabet[newIndex -1];
     }
+    /*Reverses "shift" number if encode is set to "false" to decrypt the message (input)*/
     if (encode === false) {
       shift = shift.toString();
       if (shift[0] === "-") shift = shift.slice(1, shift.length);
@@ -30,26 +36,35 @@ const caesarModule = (function () {
         shift = Number(shift);
     }
 
-
-    for (let i = 0; i < code.length; i++) {
+    /*Loops through message (input), shifting and adding letters to the answer according to "shift" number*/
+    for (let i = 0; i < code.length; i++) { 
+      /*Adds symbols or spaces to the answer*/
       if (!alphabet.includes(code[i])) {
         answer += code[i];
         continue;
       }
-        currIndex = alphabet.indexOf(code[i]);
+      /*Finds the letter (index position) in the alphabet array*/
+        currIndex = alphabet.indexOf(code[i]); 
+      /*Checks if "shift" number is a negative number*/
       if (shift < 0) {
+        /*Checks if the total number of shifts goes over the length of the alphabet array*/
         if (currIndex + shift < 0) {
+          /*Shifts negative "shift" numbers that exceed the length of the alphabet array*/
           shiftNegativeNumbers(currIndex, shift);
           continue;
-        }
+        } /*Adds shifted letters to the answer*/
           answer += alphabet[currIndex + shift];
+        /*Checks if "shift" number is a positive number*/
       } else if (shift > 0) {
+         /*Checks if the total number of shifts goes over the length of the alphabet array*/
           if (currIndex + shift > 25) {
+          /*Shifts positive "shift" numbers that exceed the length of the alphabet array*/
           shiftPositiveNumbers(currIndex, shift);
           continue;
-        }
-          answer += alphabet[currIndex + shift];
-      }
+          }
+         /*Adds shifted letters to the answer*/
+          answer += alphabet[currIndex + shift]; 
+    }
     }
     return answer;
   }
