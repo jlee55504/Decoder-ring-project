@@ -43,6 +43,11 @@ const polybiusModule = (function () {
       }
     }
   }
+
+  const decryptCode = input => {
+    
+  }
+
     if (encode === true) encodeCode(input);
     return answer;
   }
