@@ -40,7 +40,81 @@ const polybiusModule = (function () {
     }
   }
 
-  /*If encode is set to true, this runs encodeCode() (encrypts message (input))*/
+    const decryptCode = input => {
+      let numberCode = "";
+      let oneNumberWithSpaceAfter = "";
+      let answerLength = 0;
+      let areThereTwoNumbers = false;
+      let second = "";
+      /*Checks to see if the number of characters in the message (input) minus the spaces are an even 
+      number*/
+      for (let i = 0; i < input.length; i++) {
+        if (input[i] === " ") continue;
+          else answerLength++;
+      }
+      /*Returns false if the message (input) length is uneven*/
+      if (answerLength % 2 !== 0) {
+        answer = false;
+        return answer;
+      }
+
+      /*Helper function that finds the coded numbers/letters in the alphabet array and add the letters
+       to the answer*/
+      const convertNumbersToLetters = numberCode => {
+        for (let i = 0; i < Object.keys(alphabet).length; i++) {
+          if (numberCode === Object.keys(alphabet[i]).toString()) {
+             answer += Object.values(alphabet[i]);
+         }
+        }
+      }
+
+   /*Loops through coded message (input) and adds the right spaces or letters to the answer*/   
+   for (let i = 0; i < input.length; i++) {
+
+      /*Checks if there are two consecutive numbers in the message.  If so, it increases the iterator 
+    by 2*/
+      if (areThereTwoNumbers) i++;
+      
+    //First letter/space
+    const first = input[i];
+
+    /*Checks if there's a space.  If so, it adds it to the answer and moves on to the next number/space*/
+      if (first === " ") {
+        areThereTwoNumbers = false;
+        answer += first;
+        continue;
+  }
+  
+      /*Makes sure the iterator doesn't go over the message (input) length and produce undefined output*/
+      if (i <= input.length - 1) {
+        /*Checks if there's a space after the current number. If so, it saves the current number and 
+        continues to next letter/space*/
+        if (input[i+1] === " " && oneNumberWithSpaceAfter === "") {
+          oneNumberWithSpaceAfter = first;
+          continue;
+        } /*If there was a space after the first number, this adds the number after the space/spaces
+         to the answer*/ 
+          else if (oneNumberWithSpaceAfter !== "") {
+            second = first;
+            numberCode = `${oneNumberWithSpaceAfter}${second}`;
+            areThereTwoNumbers = false;
+            oneNumberWithSpaceAfter = "";
+            convertNumbersToLetters(numberCode);
+            continue;
+        }
+        
+          /*If there are two numbers in a row, this converts those numbers to the correct letters and 
+          adds two to the iterator so the second number isn't repeated*/
+          else  {
+            second = input[i+1];
+            numberCode = `${first}${second}`;
+            areThereTwoNumbers = true;
+            convertNumbersToLetters(numberCode);
+            continue;
+          }
+    }
+  }  
+}   /*If encode is set to true, this runs encodeCode() (encrypts message (input))*/
     if (encode === true) encodeCode(input);
     /*If encode is set to true, this runs decryptCode() (decrypts message (input))*/
     else if (encode === false) decryptCode(input);
