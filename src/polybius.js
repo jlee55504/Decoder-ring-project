@@ -16,14 +16,10 @@ const polybiusModule = (function () {
     /*Makes sure message (input) a string and all lowercase*/
     input = input.toString().toLowerCase();
 
-
-   // console.log(input);
-
-   /*function used to encode a message (input) if encode parameter is set to true*/
+    /*function used to encode a message (input) if encode parameter is set to true*/
     const encodeCode = input => {
       for (let i = 0; i < input.length; i++) {
         for (let j = 0; j < alphabet.length;  j++) {
-       //console.log(Object.values(alphabet[j]).toString())
         /*Checks if message (input) contains "i" or "j". If so, "42" is 
         added to the answer*/
           if (input[i] === "i" || input[i] === "j") {
@@ -32,8 +28,8 @@ const polybiusModule = (function () {
       }   /*Checks if message (input) contains spaces. If so, a space is 
       added to the answer*/
           else if (input[i] === " ") {
-          answer += input[i];
-          break;
+            answer += input[i];
+            break;
         /*Matches letters in the message (input) with the corresponding number 
         ("key") and adds it to the answer*/
       }   else if (input[i] === Object.values(alphabet[j]).toString()) {
@@ -44,14 +40,13 @@ const polybiusModule = (function () {
     }
   }
 
-  const decryptCode = input => {
-    
-  }
-
+  /*If encode is set to true, this runs encodeCode() (encrypts message (input))*/
     if (encode === true) encodeCode(input);
+    /*If encode is set to true, this runs decryptCode() (decrypts message (input))*/
+    else if (encode === false) decryptCode(input);
     return answer;
   }
-//console.log(polybius("Hello world"));
+  //console.log(polybius("Hello world"));
   return {
     polybius,
   };
