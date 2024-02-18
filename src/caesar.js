@@ -56,7 +56,7 @@ const caesarModule = (function () {
           answer += alphabet[currIndex + shift];
         /*Checks if "shift" number is a positive number*/
       } else if (shift > 0) {
-         /*Checks if the total number of shifts goes over the length of the alphabet array*/
+          /*Checks if the total number of shifts goes over the length of the alphabet array*/
           if (currIndex + shift > 25) {
           /*Shifts positive "shift" numbers that exceed the length of the alphabet array*/
           shiftPositiveNumbers(currIndex, shift);
