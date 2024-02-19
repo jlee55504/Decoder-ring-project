@@ -5,11 +5,15 @@
 
 const caesarModule = (function () {
   // you can add any code you want within this function scope
-  let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  
   function caesar(input, shift, encode = true) {
     // your solution code here
+    /*An array of the alphabet*/
+    let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     let answer = "";
+    /*The current index*/
     let currIndex;
+    /*The new, shifted index*/
     let newIndex;
     
     /*Makes sure all message letters are lowercase*/
@@ -18,7 +22,7 @@ const caesarModule = (function () {
     /*Returns false if "_shift_" value isn't present, is greater than 25, is equal to 0, or is equal or less than -25*/
     if (shift === 0 || shift <= -25 || shift > 25 || !shift) return false;
 
- /*Helper function to shift letters correctly if the total number of shifts goes over the length of the alphabet array*/
+    /*Helper function to shift letters correctly if the total number of shifts goes over the length of the alphabet array*/
     const shiftNegativeNumbers = (currIndex, numberShift) => {
         newIndex = currIndex + numberShift + 25;
         answer += alphabet[newIndex + 1];
@@ -43,7 +47,7 @@ const caesarModule = (function () {
         answer += code[i];
         continue;
       }
-      /*Finds the letter (index position) in the alphabet array*/
+        /*Finds the letter (index position) in the alphabet array*/
         currIndex = alphabet.indexOf(code[i]); 
       /*Checks if "shift" number is a negative number*/
       if (shift < 0) {
@@ -54,21 +58,21 @@ const caesarModule = (function () {
           continue;
         } /*Adds shifted letters to the answer*/
           answer += alphabet[currIndex + shift];
-        /*Checks if "shift" number is a positive number*/
+         /*Checks if "shift" number is a positive number*/
       } else if (shift > 0) {
           /*Checks if the total number of shifts goes over the length of the alphabet array*/
           if (currIndex + shift > 25) {
           /*Shifts positive "shift" numbers that exceed the length of the alphabet array*/
           shiftPositiveNumbers(currIndex, shift);
           continue;
-          }
+        }
          /*Adds shifted letters to the answer*/
           answer += alphabet[currIndex + shift]; 
     }
     }
     return answer;
   }
-
+//console.log(caesar("BPQA qa I amkzmb umaaiom!", 8, false))
   return {
     caesar,
   };
