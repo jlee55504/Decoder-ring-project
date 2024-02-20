@@ -23,6 +23,11 @@ describe("polybius (encoding)", () => {
         const expected = '4242';
         expect(actual).to.equal(expected);
     });
+    it ("returns instructions when numbers or symbols are entered for the message (input) when encoding", () => {
+        const actual = polybius("12#$");
+        const expected = "Please use letters or spaces for messages (input) only.";
+        expect(actual).to.equal(expected);
+    });
 });
 
 describe("poybius (decrypt)", () => {
@@ -40,9 +45,19 @@ describe("poybius (decrypt)", () => {
         const expected = "hello world";
         expect(actual).to.equal(expected);
     });
-    it ("returns an answer which is a string when encoding", () => {
+    it ("returns an answer with spaces maintained throughout when decoding, even when a space seperates a single number", () => {
+        const actual = polybius("3251 131 343 2 5  4 3241341", false);
+        const expected = "he llo  w   orld";
+        expect(actual).to.equal(expected);
+    });
+    it ("returns an answer which is a string when decoding", () => {
         const actual = polybius("4432423352125413", false);
         const expected = "th(i/j)nkful";
+        expect(actual).to.equal(expected);
+    });
+    it ("returns instructions when letters or symbols are entered for the message (input) when decoding", () => {
+        const actual = polybius("hello world$", false);
+        const expected = "Please use numbers or spaces for messages (input) only.";
         expect(actual).to.equal(expected);
     });
 });
