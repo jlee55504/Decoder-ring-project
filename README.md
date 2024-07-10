@@ -22,10 +22,10 @@ The Caesar shift relies on taking the alphabet and "shifting" letters to the rig
 Function caesar() takes a message (input), number of letter shifts (shift), and an optional (encode) parameter to shift the specified number of shifts to the given message (input) and returns the answer. If the "_encode_" parameter is set to false, the (shift) parameter is reversed (i.e. 8 becomes -8) and applied to the message (input). Spaces and other nonalphabetic symbols are maintained throughout the answer. If a letter is shifted so that it goes "off" the alphabet (e.g., a shift of 3 on the letter z), it wraps around to the front of the alphabet (e.g., z becomes c). Capital letters are ignored. 
 
 ![Alt text](https://github.com/jlee55504/Decoder-ring-project/blob/main/imgs/Polybius%20square%20image.png?raw=true "The Polybius cipher")
-polybius.js
-The Polybius square is a cipher that is achieved by arranging a typical alphabet into a grid. Each letter is represented through a coordinate.
 
 ## polybius.js
+The Polybius square is a cipher that is achieved by arranging a typical alphabet into a grid. Each letter is represented through a coordinate.
+
 Function polybius() takes a message (input) and optional (encode) parameter and turns letter messages (input) into a string of numbers by matching the message (input) characters with the correct value in the letter objects in the "_alphabet_" array and adds the right key to the answer if encode is set to true. If the _encode_ parameter is set to false and numbers are used for the string message (input), the numbers in the message characters (input) are matched the correct key in the "_alphabet_" array and the correct value is added to the answer and returned. The letters I and J share a space. When encoding, both letters are converted to 42, but when decoding, both letters are shown for each "i" and "j". Capital letters are ignored. Spaces are maintained throughout, even when seperating single numbers. I added this because of my obsession for perfection and it goes beyond Chegg Skill's requirements for this project. I also added code that will return instructions if numbers or symbols are used in this function when _encode_ is set to true or if letters or symbols are used when _encode_ is set to false. These both are also out of Chegg Skills requirements. I wrote tests for all my extra work that all pass in the polybius.test.js file.    
 
 ![Alt text](https://github.com/jlee55504/Decoder-ring-project/blob/main/imgs/Subsitution%20image.png?raw=true "The Substitution cipher")
