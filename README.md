@@ -1,15 +1,13 @@
-
-
 Completed Chegg Skill's "decoder ring" "Qualified" project.
+
+Overview:
+Decoder ring project encodes and decodes messages in three different ways using three different functions: the Caesar, Polybius, and substitution ciphers.
 
 Built with:
   * JavaScript ES6
   * HTML5
   * CSS3
   * Chai used for testing
-
-Overview:
-Decoder ring project encodes and decodes messages in three different ways using three different functions: the Caesar, Polybius, and substitution ciphers.
 
 ![Alt text](https://github.com/jlee55504/Decoder-ring-project/blob/main/imgs/Caesar%20cipher%20image.png?raw=true "The Caesar cipher")
 caesar.js
