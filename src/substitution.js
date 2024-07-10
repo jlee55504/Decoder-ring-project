@@ -91,7 +91,7 @@ const substitutionModule = (function () {
     else if (encode === false) decrypt(input);
     return answer;
   }
-//console.log(substitution("thinkful", "xoyqmcgrukswaflnthdjpzibev"));
+
   return {
     substitution,
   };

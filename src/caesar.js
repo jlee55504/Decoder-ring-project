@@ -16,6 +16,8 @@ const caesarModule = (function () {
     /*The new, shifted index*/
     let newIndex;
     
+    const caesarForm = document.querySelector("#caesar");
+
     /*Makes sure all message letters are lowercase*/
     let code = input.toLowerCase();
     
@@ -72,7 +74,7 @@ const caesarModule = (function () {
     }
     return answer;
   }
-//console.log(caesar("BPQA qa I amkzmb umaaiom!", 8, false))
+
   return {
     caesar,
   };
