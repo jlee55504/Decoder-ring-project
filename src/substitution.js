@@ -22,7 +22,7 @@ const substitutionModule = (function () {
     input = input.toString().toLowerCase();
     /*Checks that all characters in the substitution alphabet (alphabet) are unique and don't reappear. 
     If not, it returns false*/
-    for (let i = 0; alphabet.length; i++) {
+    for (let i = 0; i < alphabet.length; i++) {
       const character = alphabet[i];
       const index = alphabet.indexOf(character);
       if (alphabet.includes(character, index+1)) {
