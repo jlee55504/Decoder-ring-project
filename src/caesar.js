@@ -3,6 +3,7 @@
 // Only add code (helper methods, variables, etc.) within the scope
 // of the anonymous function on line 6
 
+
 const caesarModule = (function () {
   // you can add any code you want within this function scope
   
@@ -16,7 +17,7 @@ const caesarModule = (function () {
     /*The new, shifted index*/
     let newIndex;
     
-    const caesarForm = document.querySelector("#caesar");
+    //const caesarForm = document.querySelector("#caesar");
 
     /*Makes sure all message letters are lowercase*/
     let code = input.toLowerCase();
