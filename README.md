@@ -33,7 +33,7 @@ Function polybius() takes a message (input) and optional (encode) parameter and 
 
 ![Alt text](https://github.com/jlee55504/Decoder-ring-project/blob/main/imgs/Subsitution%20image.png?raw=true "The Substitution cipher")
 
-The substitution cipher requires a 26 different characters to make a substitution alphabet. Each character will represent the substitution alphabet. This cipher requires that the recipient have 26 different characters. Decrypting messages will return the characters used in the regular alphabet while ecryption will return the input using the characters in the substitution alphabet.
+The substitution cipher requires 26 different characters to make a substitution alphabet. Each character will represent the substitution alphabet. Decrypting messages will return the characters used in the regular alphabet while ecryption will return the input using the characters in the substitution alphabet.
 
 Function substitution() takes a message (input), substitution alphabet (alphabet), and an optional (encode) parameter and matches the message (input) characters with the key in the corresponding letter object in the "_alphabetArr_" array and adds and returns the correct values set by the substitution alphabet (alphabet) if "_encode_" is set to true. If "_encode_" is set to false, the message (input) characters are matched with the correct values in the letter objects in the "_alphabetArr_" array set by the substitution alphabet (alphabet) and the correct keys are added up and returned. Capital letters are ignored. False is returned if substitution alphabet (alphabet) doesn't exist or isn't exactly 26 characters long.  False is also returned if each character in the substitution alphabet (alhpabet) isn't unique. 
 
