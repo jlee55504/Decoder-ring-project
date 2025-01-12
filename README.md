@@ -2,7 +2,7 @@
 
 A web application that uses 3 different ciphers (Caesar, Polybius square, and substitution) to encode/decode messages.
 
-## Features:
+## Features
 
  - **Caesar Shift cipher:** Uses a number to shift/unshift letters based on the number.
  - **Polybius Square cipher:** A cipher that arranges the alphabet into a grid, with each letter being assigned a number.
@@ -12,7 +12,7 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
 
 ## Technologies Used
 
-  * **JavaScript ES6:**:
+  * **JavaScript:** Core programming language (JavaScript ES6)
   * **HTML:** Displays the content of the application
   * **Bootstrap:** Provides visual styling for the application
   * **Chai:** Unit testing framework
@@ -33,7 +33,7 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
  
   1. Clone the repository:
      ```
-      https://github.com/jlee55504/Decoder-ring-project.git
+      git clone https://github.com/jlee55504/Decoder-ring-project.git
      ```
   2. Navigate to the project directory:
      ```
