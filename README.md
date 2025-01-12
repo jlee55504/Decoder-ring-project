@@ -27,6 +27,7 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
 
  - Live Server Package
  - Visual Studio Code
+ - Node Package Manager (NPM)
 
  ### Installation:
  
@@ -38,7 +39,11 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
      ```
       cd Decoder-ring-project
      ```
-  3. Run the application:
+  3. Build the project:
+     ```
+     npm install
+     ```
+  4. Run the application:
      ```
       npm start
      ```
