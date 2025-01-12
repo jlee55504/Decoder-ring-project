@@ -29,15 +29,15 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
  - Visual Studio Code
  - Node Package Manager (NPM)
 
- ### Installation:
+ ### Installation
  
   1. Clone the repository:
      ```
-      git clone https://github.com/jlee55504/Decoder-ring-project.git
+     git clone https://github.com/jlee55504/Decoder-ring-project.git
      ```
   2. Navigate to the project directory:
      ```
-      cd Decoder-ring-project
+     cd Decoder-ring-project
      ```
   3. Build the project:
      ```
@@ -45,7 +45,7 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
      ```
   4. Run the application:
      ```
-      npm start
+     npm start
      ```
 
 ## Usage
