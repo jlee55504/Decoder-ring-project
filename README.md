@@ -67,4 +67,6 @@ Follow the instructions for each cipher, choose either the "encode" or "decode" 
 ## Acknowledgments
 
  - This project was built for the Chegg Skill's software engineering program
- - I went beyond Chegg Skill's coding requirements by writing code for the Polybius Square cipher that maintains spaces in messages and displays a message along with instructions if incorrect characters are used.
+ - I went beyond Chegg Skill's coding requirements by writing code for the 
+ Polybius Square cipher that maintains spaces in messages and displays a message
+  along with instructions if incorrect characters are used
