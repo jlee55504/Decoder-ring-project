@@ -13,7 +13,7 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
 ## Technologies Used
 
   * **JavaScript:** Core programming language (JavaScript ES6)
-  * **HTML:** Displays the content of the application
+  * **HTML:** Visually displays the content of the application
   * **Bootstrap:** Provides visual styling for the application
   * **Chai:** Unit testing framework
 
