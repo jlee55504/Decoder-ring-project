@@ -25,8 +25,6 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
 
 ### Prerequisites
 
- - Live Server Package
- - Visual Studio Code
  - Node Package Manager (NPM)
 
  ### Installation
