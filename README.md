@@ -57,10 +57,10 @@ Follow the instructions for each cipher, choose either the "encode" or "decode" 
 
 ## Code Structure
 
- - **index.html:** Main application entry point
- - **src/caesar.js:** Handles the Caesar Shift cipher functionality
- - **src/polybius.js:** Handles the Polybius Square cipher functionality
- - **src/substitution.js:** Handles the Substitution cipher functionality
+ - ``index.html:`` Main application entry point
+ - ``src/caesar.js:`` Handles the Caesar Shift cipher functionality
+ - ``src/polybius.js:`` Handles the Polybius Square cipher functionality
+ - ``src/substitution.js:`` Handles the Substitution cipher functionality
 
 ## Acknowledgments
 
