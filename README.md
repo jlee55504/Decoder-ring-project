@@ -4,9 +4,9 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
 
 ## Features
 
- - **Caesar Shift cipher:** Uses a number to shift/unshift letters based on the number.
- - **Polybius Square cipher:** A cipher that arranges the alphabet into a grid, with each letter being assigned a number.
- - **Substitution cipher:** Uses 26 different characters to create a "substitution" alphabet to encrypt/decrypt messages.
+ - **Caesar Shift Cipher:** Uses a number to shift/unshift letters based on the number.
+ - **Polybius Square Cipher:** A cipher that arranges the alphabet into a grid, with each letter being assigned a number.
+ - **Substitution Cipher:** Uses 26 different characters to create a "substitution" alphabet to encrypt/decrypt messages.
  - **User-friendly Interface:** Easy to use interface with clear instructions on how to use the application.
  - **Error Handling:** Robust error handling for enhanced reliability.
 
