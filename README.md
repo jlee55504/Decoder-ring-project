@@ -14,7 +14,7 @@ A web application that uses 3 different ciphers (Caesar, Polybius square, and su
 
   * **JavaScript:** Core programming language (JavaScript ES6)
   * **HTML:** Visually displays the content of the application
-  * **Bootstrap:** Provides visual styling for the application
+  * **Bootstrap:** Provides visual styling of the application
   * **Chai:** Unit testing framework
 
 ## Screenshot
@@ -61,6 +61,7 @@ Follow the instructions for each cipher, choose either the "encode" or "decode" 
  - ``src/caesar.js:`` Handles the Caesar Shift cipher functionality
  - ``src/polybius.js:`` Handles the Polybius Square cipher functionality
  - ``src/substitution.js:`` Handles the Substitution cipher functionality
+ - ``imgs:`` Contains the screenshots of the application
 
 ## Acknowledgments
 
