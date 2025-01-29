@@ -61,7 +61,7 @@ Follow the instructions for each cipher, choose either the "encode" or "decode" 
  - ``src/caesar.js:`` Handles the Caesar Shift cipher functionality
  - ``src/polybius.js:`` Handles the Polybius Square cipher functionality
  - ``src/substitution.js:`` Handles the Substitution cipher functionality
- - ``imgs:`` Contains the screenshots of the application
+ - ``imgs/:`` Contains the screenshots of the application
 
 ## Acknowledgments
 
